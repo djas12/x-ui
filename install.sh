@@ -90,7 +90,7 @@ install_x-ui() {
             exit 1
         fi
         echo -e "terdeteksi x-ui Versi terbaru dari：${last_version}，mulai instalasi"
-        wget -N --no-check-certificate -O /usr/local/x-ui-linux-${arch}.tar.gz https://github.com/djas12/x-ui/releases/download/${last_version}/x-ui-linux-${arch}.tar.gz
+        wget -N --no-check-certificate -O /usr/local/x-ui-linux-${arch}.tar.gz https://github.com/vaxilu/x-ui/releases/download/${last_version}/x-ui-linux-${arch}.tar.gz
         if [[ $? -ne 0 ]]; then
             echo -e "${red}unduh x-ui gagal，Pastikan server Anda dapat mengunduh Github dokumen${plain}"
             exit 1

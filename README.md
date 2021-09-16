@@ -1,26 +1,50 @@
 # x-ui
-支持多协议多用户的 xray 面板
+Mendukung panel xray multi-protokol dan multi-pengguna
 
-# 功能介绍
-- 系统状态监控
-- 支持多用户多协议，网页可视化操作
-- 支持的协议：vmess、vless、trojan、shadowsocks、dokodemo-door、socks、http
-- 支持配置更多传输配置
-- 流量统计，限制流量，限制到期时间
-- 可自定义 xray 配置模板
-- 支持 https 访问面板（自备域名 + ssl 证书）
-- 更多高级配置项，详见面板
+# Fitur
+-Pemantauan status sistem
+-Dukungan multi-pengguna dan multi-protokol, operasi visualisasi halaman web
+-Protokol yang didukung: vmess, vless, trojan, shadowsocks, dokodemo-door, socks, http
+-Dukungan untuk mengonfigurasi lebih banyak konfigurasi transmisi
+-Statistik lalu lintas, batasi lalu lintas, batasi waktu kedaluwarsa
+-Templat konfigurasi xray yang dapat disesuaikan
+-Mendukung panel akses https (bawa nama domain Anda sendiri + sertifikat ssl)
+-Item konfigurasi lebih lanjut, lihat panel untuk detailnya
 
-# 安装&升级
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Sebelum install, harap install dahulu pendukungnya..
+* Ubuntu :
+apt update -y          # Debian/Ubuntu
+apt install -y curl    #Debian/Ubuntu
+apt install -y socat    #Debian/Ubuntu
+
+* CentOS :
+yum update -y          #CentOS
+yum install -y curl    #CentOS
+yum install -y socat    #CentOS
+
+* Instal skrip Acme :
+curl https://get.acme.sh | sh
+
+* Ganti Alamat email dan juga nama domain dengan nama domain yang kalian miliki :
+~/.acme.sh/acme.sh --register-account -m emailkalian@xxxx.com
+~/.acme.sh/acme.sh  --issue -d domainkalian.com   --standalone
+
+* Letakan Certifikat di Folder yang kalian inginkan, pada contoh ini kita letakan di Folder ROOT, Dan jangan lupa ganti domain dengan nama domain kalian :
+~/.acme.sh/acme.sh --installcert -d domainkalian.com --key-file /root/private.key --fullchain-file /root/cert.crt
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Instalasi Cukup sekali KLIK :
 ```
 bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)
 ```
+===========================================================================================================================================================================
+## Instalasi & peningkatan manual
+1. Pertama unduh paket terkompresi terbaru dari https://github.com/vaxilu/x-ui/releases, umumnya pilih arsitektur `amd64`
+2. Kemudian unggah paket terkompresi ke direktori `/root/` server, dan gunakan pengguna `root` untuk masuk ke server
 
-## 手动安装&升级
-1. 首先从 https://github.com/vaxilu/x-ui/releases 下载最新的压缩包，一般选择`amd64`架构
-2. 然后将这个压缩包上传到服务器的`/root/`目录下，并使用`root`用户登录服务器
-
-> 如果你的服务器 cpu 架构不是`amd64`，自行将命令中的`amd64`替换为其他架构
+> Jika arsitektur cpu server Anda bukan `amd64`, ganti `amd64` dalam perintah dengan arsitektur lain
 
 ```
 cd /root/
@@ -35,16 +59,16 @@ systemctl enable x-ui
 systemctl restart x-ui
 ```
 
-## 建议系统
+## Sistem Saran
 - CentOS 7+
 - Ubuntu 16+
 - Debian 8+
 
-# 常见问题
+#masalah umum 
 
-## 从 v2-ui 迁移
-首先在安装了 v2-ui 的服务器上安装最新版 x-ui，然后使用以下命令进行迁移，将迁移本机 v2-ui 的`所有 inbound 账号数据`至 x-ui，`面板设置和用户名密码不会迁移`
-> 迁移成功后请`关闭 v2-ui`并且`重启 x-ui`，否则 v2-ui 的 inbound 会与 x-ui 的 inbound 会产生`端口冲突`
+## Bermigrasi dari v2-ui
+Pertama-tama instal x-ui versi terbaru di server tempat v2-ui diinstal, lalu gunakan perintah berikut untuk bermigrasi, yang akan memigrasikan `semua data akun masuk` dari mesin v2-ui ke x-ui, ` pengaturan panel dan nama pengguna dan kata sandi Tidak akan bermigrasi`
+> Setelah migrasi berhasil, silakan `close v2-ui` dan `restart x-ui`, jika tidak, masuknya v2-ui dan masuknya x-ui akan menyebabkan `port conflict`
 ```
 x-ui v2-ui
 ```

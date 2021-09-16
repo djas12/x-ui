@@ -65,7 +65,7 @@ func (s *SettingService) GetAllSetting() (*entity.AllSetting, error) {
 		}
 
 		if !found {
-			// 有些设置自动生成，不需要返回到前端给用户修改
+			// Beberapa pengaturan dibuat secara otomatis dan tidak perlu dikembalikan ke front end untuk dimodifikasi oleh pengguna
 			return nil
 		}
 

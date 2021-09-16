@@ -101,7 +101,7 @@ update() {
         fi
         return 0
     fi
-    bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)
+    bash <(curl -Ls https://raw.githubusercontent.com/djas12/x-ui/master/install.sh)
     if [[ $? == 0 ]]; then
         echo -e "${green}Pembaruan selesai dan panel telah dimulai ulang secara otomatis${plain}"
         exit 0

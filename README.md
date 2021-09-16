@@ -44,7 +44,7 @@ curl https://get.acme.sh | sh<br/>
 
 # Instalasi Cukup sekali KLIK :
 ```
-bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/djas12/x-ui/master/install.sh)
 ```
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Instalasi & peningkatan manual

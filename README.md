@@ -3,31 +3,38 @@ Mendukung panel xray multi-protokol dan multi-pengguna
 
 # Fitur
 -Pemantauan status sistem
+
 -Dukungan multi-pengguna dan multi-protokol, operasi visualisasi halaman web
+
 -Protokol yang didukung: vmess, vless, trojan, shadowsocks, dokodemo-door, socks, http
+
 -Dukungan untuk mengonfigurasi lebih banyak konfigurasi transmisi
+
 -Statistik lalu lintas, batasi lalu lintas, batasi waktu kedaluwarsa
+
 -Templat konfigurasi xray yang dapat disesuaikan
+
 -Mendukung panel akses https (bawa nama domain Anda sendiri + sertifikat ssl)
+
 -Item konfigurasi lebih lanjut, lihat panel untuk detailnya
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Sebelum install, harap install dahulu pendukungnya..
-* Ubuntu :
-apt update -y          # Debian/Ubuntu
-apt install -y curl    #Debian/Ubuntu
-apt install -y socat    #Debian/Ubuntu
+* Ubuntu :<br/>
+apt update -y<br/>
+apt install -y curl<br/>
+apt install -y socat<br/>
 
-* CentOS :
-yum update -y          #CentOS
-yum install -y curl    #CentOS
-yum install -y socat    #CentOS
+* CentOS :<br/>
+yum update -y<br/>
+yum install -y curl<br/>
+yum install -y socat<br/>
 
-* Instal skrip Acme :
-curl https://get.acme.sh | sh
+* Instal skrip Acme :<br/>
+curl https://get.acme.sh | sh<br/>
 
-* Ganti Alamat email dan juga nama domain dengan nama domain yang kalian miliki :
-~/.acme.sh/acme.sh --register-account -m emailkalian@xxxx.com
+* Ganti Alamat email dan juga nama domain dengan nama domain yang kalian miliki :<br/>
+~/.acme.sh/acme.sh --register-account -m emailkalian@xxxx.com<br/>
 ~/.acme.sh/acme.sh  --issue -d domainkalian.com   --standalone
 
 * Letakan Certifikat di Folder yang kalian inginkan, pada contoh ini kita letakan di Folder ROOT, Dan jangan lupa ganti domain dengan nama domain kalian :

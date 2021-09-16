@@ -37,7 +37,7 @@ curl https://get.acme.sh | sh<br/>
 ~/.acme.sh/acme.sh --register-account -m emailkalian@xxxx.com<br/>
 ~/.acme.sh/acme.sh  --issue -d domainkalian.com   --standalone
 
-* Letakan Certifikat di Folder yang kalian inginkan, pada contoh ini kita letakan di Folder ROOT, Dan jangan lupa ganti domain dengan nama domain kalian :
+* Letakan Certifikat di Folder yang kalian inginkan, pada contoh ini kita letakan di Folder ROOT, Dan jangan lupa ganti domain dengan nama domain kalian :<br/>
 ~/.acme.sh/acme.sh --installcert -d domainkalian.com --key-file /root/private.key --fullchain-file /root/cert.crt
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -46,7 +46,7 @@ curl https://get.acme.sh | sh<br/>
 ```
 bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)
 ```
-===========================================================================================================================================================================
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Instalasi & peningkatan manual
 1. Pertama unduh paket terkompresi terbaru dari https://github.com/vaxilu/x-ui/releases, umumnya pilih arsitektur `amd64`
 2. Kemudian unggah paket terkompresi ke direktori `/root/` server, dan gunakan pengguna `root` untuk masuk ke server

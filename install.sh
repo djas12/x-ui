@@ -84,7 +84,7 @@ install_x-ui() {
     cd /usr/local/
 
     if  [ $# == 0 ] ;then
-        last_version=$(curl -Ls "https://api.github.com/repos/djas12/x-ui/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+        last_version=$(curl -Ls "https://api.github.com/repos/vaxilu/x-ui/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
         if [[ ! -n "$last_version" ]]; then
             echo -e "${red}Deteksi x-ui Versi gagal, mungkin lebih dari itu Github API Batasan, silakan coba lagi nanti, atau tentukan secara manual x-ui Instalasi versi${plain}"
             exit 1
